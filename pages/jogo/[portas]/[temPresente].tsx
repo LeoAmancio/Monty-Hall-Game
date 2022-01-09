@@ -42,7 +42,10 @@ export default function jogo() {
     return (
       <div className={styles.jogo}>
           <div className={styles.portas}>
-            {renderizarPortas()}
+            {valido ? 
+              renderizarPortas() : 
+              <h1>Valores inválidos</h1>
+          }
           </div>
           <div className={styles.botoes}>
              <Link href="/">
